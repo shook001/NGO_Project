@@ -1,55 +1,55 @@
-<!DOCTYPE html>
-{% load static %}
+<!DOCTYPE html> {% load static %}
 <html lang="en">
 
-    <head>
+<head>
 
-        <!-- Required meta tags -->
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-        <!-- documentation at http://getbootstrap.com/docs/4.0/, alternative themes at https://bootswatch.com/4-alpha/ -->
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet"/>
+    <!-- documentation at http://getbootstrap.com/docs/4.0/, alternative themes at https://bootswatch.com/4-alpha/ -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet" />
 
-        <link href="{% static 'style.css' %}" rel="stylesheet"/>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <link href="{% static 'style.css' %}" rel="stylesheet" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
 
-        <title>NGO: {% block title %}{% endblock %}</title>
+    <title>NGO: {% block title %}{% endblock %}</title>
 
-    </head>
+</head>
 
-    <body>
+<body>
 
-        <nav class="navbar navbar-expand-md navbar-light bg-light border">
-            <a class="navbar-brand" href="/"><span class="blue">N</span><span class="red">G</span><span class="Green">O</span></span></a>
-            <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbar" data-toggle="collapse" type="button">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbar">
-                {% if session.user_id %}
-                    <ul>
-                        <ul class="navbar-nav ml-auto mt-2">
-                            <li class="nav-item"><a class="nav-link" href="/logout">Log Out</a></li>
-                        </ul>
-                    </ul>
-                {% else %}
-                    <ul class="navbar-nav ml-auto mt-2">
-                        <li class="nav-item"><a class="nav-link" href="accounts/login">Log In</a></li>
-                    </ul>
-                {% endif %}
-            </div>
-        </nav>
+    <nav class="navbar navbar-expand-md navbar-light bg-light border">
+        <a class="navbar-brand" href="/"><span class="blue">N</span><span class="red">G</span><span class="Green">O</span></span></a>
+        <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbar"
+            data-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+            {% if user.is_authenticated %}
+            <ul>
+                <ul class="navbar-nav ml-auto mt-2">
+                    <li class="nav-item"><a class="nav-link" href="accounts/logout">Log Out</a></li>
+                </ul>
+            </ul>
+            {% else %}
+            <ul class="navbar-nav ml-auto mt-2">
+                <li class="nav-item"><a class="nav-link" href="accounts/login">Log In</a></li>
+            </ul>
+            {% endif %}
+        </div>
+    </nav>
 
 
-        <main class="container p-5">
-            {% block content %}
-            {% endblock %}
-        </main>
+    <main class="container p-5">
+        {% block content %} {% endblock %}
+    </main>
 
-        <footer class="small text-center text-muted">
-            Created by: <a href="https://github.com/dabubbla">Edward J.</a>,
-             <a href="#">Sean H.</a>, and  <a href="#">Xiaochen H.</a>
-        </footer>
+    <footer class="small text-center text-muted">
+        Created by: <a href="https://github.com/dabubbla">Edward J.</a>,
+        <a href="#">Sean H.</a>, and <a href="#">Xiaochen H.</a>
+    </footer>
     <script src="'{% static 'main.js' %}"></script>
-    </body>
+</body>
+
 </html>

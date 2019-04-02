@@ -2,13 +2,16 @@ from django.shortcuts import render
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from .forms import RegisterForm
 from .models import *
+from django.contrib.auth.decorators import login_required
+
 
 # Events will act as homepage
 def events(request): # good
 	events = Event.objects.all()
 	return render(request, 'events.html', {'events': events})
 
-# Selected object will be directed here
+# Selected object will be directed heres
+@login_required
 def event_detail(request, id):# good
 	try:
 		event = Event.objects.get(id=id)
