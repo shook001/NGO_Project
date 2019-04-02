@@ -7,5 +7,5 @@ class RegisterForm(forms.Form):
     email = forms.EmailField(max_length=254)
     phone = forms.CharField(label='Phone Number', max_length=100)
     address = forms.CharField(label='Address', max_length=100)
-    adultQty = forms.CharField(label='Adult Quantity', max_length=2)
-    childQty = forms.CharField(label='Child Quantity', max_length=2)
+    adultQty = forms.IntegerField(label='Adult Quantity')
+    childQty = forms.IntegerField(label='Child Quantity')
