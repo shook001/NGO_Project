@@ -37,5 +37,5 @@ class RegForm(models.Model):
 	email = models.EmailField(max_length=254)
 	phone = models.CharField(max_length=100)
 	address = models.CharField(max_length=100)
-	adultQty = models.CharField(max_length=2)
-	childQty = models.CharField(max_length=2)
+	adultQty = models.IntegerField()
+	childQty = models.IntegerField()

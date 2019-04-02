@@ -3,10 +3,12 @@ from django.http import HttpResponse, Http404, HttpResponseRedirect
 from .forms import RegisterForm
 from .models import *
 
+
 # Events will act as homepage
 def events(request): # good
 	events = Event.objects.all()
 	return render(request, 'events.html', {'events': events})
+
 
 # Selected object will be directed here
 def event_detail(request, id):# good
@@ -15,6 +17,7 @@ def event_detail(request, id):# good
 	except Event.DoesNotExist:
 		raise Http404('Event not found!!')
 	return render(request, 'event-detail.html', {'event': event})
+
 
 def post(request):
 	if request.method == 'POST':
