@@ -1,17 +1,13 @@
-{% extends 'base.html' %}
-{% block title %}
-    Events
-{% endblock %}
-{% block content %}
-    <div>
-        {% for event in events %}
-        <div class="eventname">
-            <a href="/event-detail/{{ event.id }}/">
-                <h3>{{ event.name|capfirst }}</h3>
-            </a>
-            <p>Description: {{ event.description }}</p>
-            <p>Location: {{ event.location }}</p>
-        </div>
-        {% endfor %}
+{% extends 'base.html' %} {% block title %} Events {% endblock %} {% block content %}
+<div>
+    {% for event in events %}
+    <div class="eventname">
+        <a href="/event-detail/{{ event.id }}/">
+            <img src="{{event.e_image.url}}" alt="Pic" width="240px"> </a>
+        <h3>{{ event.name|capfirst }}</h3>
+        <p>Description: {{ event.description }}</p>
+        <p>Location: {{ event.location }}</p>
     </div>
+    {% endfor %}
+</div>
 {% endblock %}
