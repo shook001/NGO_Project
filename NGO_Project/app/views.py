@@ -28,6 +28,7 @@ def post(request):
 			obj.address = form.cleaned_data['address']
 			obj.adultQty = form.cleaned_data['adultQty']
 			obj.childQty = form.cleaned_data['childQty']
+			obj.save()
 			return HttpResponseRedirect('/price/')
 	else:
 		form = RegisterForm()
