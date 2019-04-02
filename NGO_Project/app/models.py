@@ -29,3 +29,13 @@ class User(models.Model):
 	password = models.CharField(max_length=20)
 	"""Testing blank=True on role. If any problems arise, let Ed know."""
 	role = models.CharField(choices=ROLE_CHOICES, max_length=5, blank=True)
+
+
+class RegForm(models.Model):
+	first_name = models.CharField(max_length=100)
+	last_name = models.CharField(max_length=100)
+	email = models.EmailField(max_length=254)
+	phone = models.CharField(max_length=100)
+	address = models.CharField(max_length=100)
+	adultQty = models.CharField(max_length=2)
+	childQty = models.CharField(max_length=2)
