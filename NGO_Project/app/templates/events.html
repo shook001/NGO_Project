@@ -3,7 +3,7 @@
     {% for event in events %}
     <div class="eventname">
         <a href="/event-detail/{{ event.id }}/">
-            <img src="{{event.e_image.url}}" alt="Pic" width="240px"> </a>
+            <img src="{{event.e_image.url}}" alt="Pic" width="240px" height="240px"> </a>
         <h3>{{ event.name|capfirst }}</h3>
         <p>Description: {{ event.description }}</p>
         <p>Location: {{ event.location }}</p>
@@ -11,5 +11,15 @@
     {% endfor %}
 </div>
 <style>
+    .eventname {
+        float: left;
+        margin-right: 100px;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0px;
+        left: 600px;
+    }
 </style>
 {% endblock %}
