@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Event Details
+{% endblock %}
+
+
+{% block content %}
+<div>
+  <h3>Name: {{ event.Event }}</h3>
+</div>
+<!-- <div>
+    <h3>{{ data.event|capfirst }}</h3>
+    <p>Description: {{ event.e_description }}</p>
+    <p>Category: {{ event.e_category }}</p>
+    <p>Start Date: {{ event.e_start_date }}</p>
+    <p>End Date: {{ event.e_end_date }}</p>
+    <p>Start Time: {{ event.e_start_time }}</p>
+    <p>End Time: {{ event.e_end_time }}</p>
+    <p>Location: {{ event.e_location }}</p>
+<!--Let's see if this works :)-->
+    <!-- <img {{ event.e_image }}>
+<!---->
+    <!-- <h2>Admissions</h2>
+    <p>Adult:{{ event.e_adult_price }}</p>
+    <p>Children:{{ event.e_child_price }}</p>
+</div>
+<a href="{% url 'register' %}"><h3>Register for Event</h3>
+</a> -->
+
+{% endblock %}

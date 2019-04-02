@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Total Price{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+
+<h1>Total Prices</h1>
+<p>Total Adult Tickets: </p>
+<p>Total Child Tickets: </p>
+<p>Total Price: </p>
+<a href="{% url 'conformation' %}"><p>Confirm</p></a>
+
+
+{% endif %}
+{% endblock %}

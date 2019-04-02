@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}
+    Events
+{% endblock %}
+{% block content %}
+    <div>
+        {% for event in events %}
+        <div class="eventname">
+            <a href="/event-detail/{{ event.id }}/">
+                <h3>{{ event.name|capfirst }}</h3>
+            </a>
+            <p>Description: {{ event.description }}</p>
+            <p>Location: {{ event.location }}</p>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

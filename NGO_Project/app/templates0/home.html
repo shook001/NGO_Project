@@ -1,0 +1,27 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+  Hi {{ user.username }}!
+
+<!--<form method="Post">-->
+<!--  {% csrf_token %}-->
+<!--  {{ form.as_p }}-->
+<!--  <button type="submit">Submit</button>-->
+<!--</form>-->
+<!--  <h2>{{ text }}</h2>-->
+<!--  {% for post in posts %}-->
+<!--    <h1>{{ post.post }}</h1>-->
+<!--    <p>{{ post.date }}</p>-->
+<!--  {% endfor %}-->
+
+
+
+{% else %}
+  <p>You are not logged in</p>
+  <a href="{% url 'login' %}">login</a>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}
+    Details
+{% endblock %}
+{% block content %}
+    <div>
+        <h3>{{ event.name|capfirst }}</h3>
+        <p>Description: {{ event.description }}</p>
+        <p>Category: {{ event.category }}</p>
+        <p>Start Date: {{ event.start_date|date:"M d Y" }}</p>
+        <p>Start Time: {{ event.e_start_time }}</p>
+        <p>End Date: {{ event.end_date|date:"M d Y" }}</p>
+        <p>End Time: {{ event.e_end_time }}</p>
+        <p>Location: {{ event.location }}</p>
+        <img src="{{ event.e_image }}"></img>
+        <h2>Admissions:</h2>
+        <p>Adult: {{ event.e_adult_price }}</p>
+        <p>Child: {{ event.e_child_price }}</p>
+    </div>
+{% endblock %}
