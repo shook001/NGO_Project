@@ -1,9 +1,4 @@
-{% extends 'base.html' %}
-
-{% block title %}Total Price{% endblock %}
-
-{% block content %}
-{% if user.is_authenticated %}
+{% extends 'base.html' %} {% block title %}Total Price{% endblock %} {% block content %} {% if user.is_authenticated %}
 
 <h1>Total Prices</h1>
 <p>Total Adult Tickets: </p>
@@ -12,5 +7,4 @@
 <a href="{% url 'confirmation' %}"><p>Confirm</p></a>
 
 
-{% endif %}
-{% endblock %}
+{% endif %} {% endblock %}
