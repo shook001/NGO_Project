@@ -5,9 +5,10 @@ from django.conf.urls.static import static
 from app import views
 
 urlpatterns = [
+    path('', views.events, name='events'),
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
-    path('events/', views.events, name='events'),
+    path('confirmation/', views.confirm, name='confirmation'),
     path('event-detail/<int:id>/', views.event_detail, name='event_detail'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

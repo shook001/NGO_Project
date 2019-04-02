@@ -3,20 +3,6 @@
 {% block title %} Register {% endblock %}
 {% block content %}
 
-<!--Register template skeleton Otherwise Ed will forget to do this.-->
-<!--<form>-->
-<!--    <formfield name="username"></formfield>-->
-<!--    <formfield name="password"></formfield>-->
-<!--    <formfield name="p_again"></formfield>-->
-<!--    <button name="submit"></button>-->
-<!--</form>-->
-
-<!--<form method="post">-->
-<!--    {% csrf_token %}-->
-<!--    {{ form }}-->
-<!--    <input type="submit" value="Submit">-->
-<!--</form>-->
-
 <form action ="{% url 'price' %}" method="post">
     <p>
         <label for="first_name">First name: </label>
@@ -58,5 +44,3 @@
 
 
 {% endblock %}
-
-
