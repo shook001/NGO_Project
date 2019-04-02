@@ -1,7 +1,13 @@
 from django.shortcuts import render
+<<<<<<< HEAD
+from django.http import HttpResponse, Http404, HttpResponseRedirect
+from .forms import RegisterForm
+from .models import *
+=======
 from django.http import HttpResponse, Http404
 
 from .models import Event, User
+>>>>>>> 2e34e389c8963ae61f73a45da229d1cb010c2068
 
 # Events will act as homepage
 def events(request): # good
@@ -17,6 +23,28 @@ def event_detail(request, id):# good
 	return render(request, 'event-detail.html', {'event': event})
 
 
+<<<<<<< HEAD
+def post(request):
+	if request.method == 'POST':
+		form = RegisterForm(request.POST)
+		if form.is_valid():
+			obj = RegForm()
+			obj.first_name = form.cleaned_data['first_name']
+			obj.last_name = form.cleaned_data['last_name']
+			obj.email = form.cleaned_data['email']
+			obj.phone = form.cleaned_data['phone']
+			obj.address = form.cleaned_data['address']
+			obj.adultQty = form.cleaned_data['adultQty']
+			obj.childQty = form.cleaned_data['childQty']
+			return HttpResponseRedirect('/price/')
+	else:
+		form = RegisterForm()
+	return render(request, 'register.html', {'form': form})
+
+	# form = RegisterForm()
+	# return render(request, 'register.html', {'form': form})
+
+=======
 # Accounts/login
 def login(request):
 	return render(request, 'registration.login.html')
@@ -29,3 +57,4 @@ def total(request):
 # confirmation that order was recognized
 def confirm(request):# good
 	return render(request, 'confirm.html')
+>>>>>>> 2e34e389c8963ae61f73a45da229d1cb010c2068
