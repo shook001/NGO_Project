@@ -122,9 +122,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
-<<<<<<< HEAD
-LOGIN_REDIRECT_URL = '/events/'
-=======
+LOGIN_REDIRECT_URL = '/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'newNGO/media')
->>>>>>> 2e34e389c8963ae61f73a45da229d1cb010c2068

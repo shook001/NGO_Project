@@ -1,13 +1,10 @@
 from django.shortcuts import render
-<<<<<<< HEAD
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from .forms import RegisterForm
 from .models import *
-=======
 from django.http import HttpResponse, Http404
 
 from .models import Event, User
->>>>>>> 2e34e389c8963ae61f73a45da229d1cb010c2068
 
 # Events will act as homepage
 def events(request): # good
@@ -23,7 +20,6 @@ def event_detail(request, id):# good
 	return render(request, 'event-detail.html', {'event': event})
 
 
-<<<<<<< HEAD
 def post(request):
 	if request.method == 'POST':
 		form = RegisterForm(request.POST)
@@ -44,7 +40,6 @@ def post(request):
 	# form = RegisterForm()
 	# return render(request, 'register.html', {'form': form})
 
-=======
 # Accounts/login
 def login(request):
 	return render(request, 'registration.login.html')
@@ -57,4 +52,3 @@ def total(request):
 # confirmation that order was recognized
 def confirm(request):# good
 	return render(request, 'confirm.html')
->>>>>>> 2e34e389c8963ae61f73a45da229d1cb010c2068
