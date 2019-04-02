@@ -29,12 +29,15 @@
             {% if user.is_authenticated %}
             <ul>
                 <ul class="navbar-nav ml-auto mt-2">
-                    <li class="nav-item"><a class="nav-link" href="accounts/logout">Log Out</a></li>
+                    <li class="nav-item"><a class="logout" href="accounts/logout">Log Out</a></li>
                 </ul>
             </ul>
             {% else %}
             <ul class="navbar-nav ml-auto mt-2">
-                <li class="nav-item"><a class="nav-link" href="accounts/login">Log In</a></li>
+                <li class="nav-item"><a class="login" href="accounts/login">Log In</a></li>
+            </ul>
+            <ul class="navbar-nav ml-auto mt-2">
+                <li class="nav-item"><a class="loginadmin" href="admin">Admin Log In</a></li>
             </ul>
             {% endif %}
         </div>
@@ -51,5 +54,19 @@
     </footer>
     <script src="'{% static 'main.js' %}"></script>
 </body>
+<style>
+    a.logout,
+    a.login {
+        position: absolute;
+        top: 20px;
+        right: 100px;
+    }
+
+    a.loginadmin {
+        position: absolute;
+        top: 20px;
+        right: 200px;
+    }
+</style>
 
 </html>
