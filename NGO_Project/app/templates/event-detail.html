@@ -8,9 +8,10 @@
     <p>End Date: {{ event.end_date|date:"M d Y" }}</p>
     <p>End Time: {{ event.e_end_time }}</p>
     <p>Location: {{ event.location }}</p>
-    <img src="{{ event.e_image.url }}"></img>
+    <img src="{{ event.e_image.url }}" width="240px"></img>
     <h2>Admissions:</h2>
     <p>Adult: {{ event.e_adult_price }}</p>
     <p>Child: {{ event.e_child_price }}</p>
+    <a href="/register/"><button>Register</button></a>
 </div>
 {% endblock %}
