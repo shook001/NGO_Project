@@ -17,7 +17,7 @@ class Event(models.Model):
 	e_end_time = models.DateTimeField()
 	location = models.CharField(max_length=50)
 	registrants = models.BooleanField()
-	e_image = models.ImageField()
+	e_image = models.ImageField(upload_to='profile_image')
 	e_adult_price = models.DecimalField(max_digits=5, decimal_places=2)
 	e_child_price = models.DecimalField(max_digits=5, decimal_places=2)
 

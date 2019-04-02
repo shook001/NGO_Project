@@ -1,15 +1,21 @@
 from django.shortcuts import render
+<<<<<<< HEAD
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from .forms import RegisterForm
 from .models import *
+=======
+from django.http import HttpResponse, Http404
 
+from .models import Event, User
+>>>>>>> 2e34e389c8963ae61f73a45da229d1cb010c2068
 
-def events(request):
+# Events will act as homepage
+def events(request): # good
 	events = Event.objects.all()
 	return render(request, 'events.html', {'events': events})
 
-
-def event_detail(request, id):
+# Selected object will be directed here
+def event_detail(request, id):# good
 	try:
 		event = Event.objects.get(id=id)
 	except Event.DoesNotExist:
@@ -17,6 +23,7 @@ def event_detail(request, id):
 	return render(request, 'event-detail.html', {'event': event})
 
 
+<<<<<<< HEAD
 def post(request):
 	if request.method == 'POST':
 		form = RegisterForm(request.POST)
@@ -37,3 +44,17 @@ def post(request):
 	# form = RegisterForm()
 	# return render(request, 'register.html', {'form': form})
 
+=======
+# Accounts/login
+def login(request):
+	return render(request, 'registration.login.html')
+
+# After user selects ticket amounts we need to provide a sum/total
+def total(request):
+	pass
+
+
+# confirmation that order was recognized
+def confirm(request):# good
+	return render(request, 'confirm.html')
+>>>>>>> 2e34e389c8963ae61f73a45da229d1cb010c2068
