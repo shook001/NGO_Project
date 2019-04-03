@@ -30,7 +30,9 @@ def event_detail(request, id):# good
 				# return HttpResponseRedirect('event-detail/<int:id>/')
 		else:
 			form = RegisterForm()
-		forms = RegForm.objects.get(id=id)
+		forms = RegForm.objects.latest('id')
+		adult = forms.adultQty
+		child = forms.childQty
 		total = event.e_adult_price * forms.adultQty + event.e_child_price * forms.childQty
 		# forms = RegForm.objects.all(id=id)
 		# one = forms[0]
@@ -42,7 +44,9 @@ def event_detail(request, id):# good
 	context = {
 		'event': event,
 		'form': form,
-		'total': total
+		'total': total,
+		'adult': adult,
+		'child': child
 	}
 	return render(request, 'event-detail.html', context)
 
