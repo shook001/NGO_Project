@@ -15,27 +15,63 @@ def events(request): # good
 def event_detail(request, id):# good
 	try:
 		event = Event.objects.get(id=id)
+		if request.method == 'POST':
+			form = RegisterForm(request.POST)
+			if form.is_valid():
+				obj = RegForm()
+				obj.first_name = form.cleaned_data['first_name']
+				obj.last_name = form.cleaned_data['last_name']
+				obj.email = form.cleaned_data['email']
+				obj.phone = form.cleaned_data['phone']
+				obj.address = form.cleaned_data['address']
+				obj.adultQty = form.cleaned_data['adultQty']
+				obj.childQty = form.cleaned_data['childQty']
+				obj.save()
+				return HttpResponseRedirect('/price/')
+		else:
+			form = RegisterForm()
 	except Event.DoesNotExist:
 		raise Http404('Event not found!!')
-	return render(request, 'event-detail.html', {'event': event})
+	context = {
+		'event': event,
+		'form': form
+	}
+	return render(request, 'event-detail.html', context)
 
-def post(request):
-	if request.method == 'POST':
-		form = RegisterForm(request.POST)
-		if form.is_valid():
-			obj = RegForm()
-			obj.first_name = form.cleaned_data['first_name']
-			obj.last_name = form.cleaned_data['last_name']
-			obj.email = form.cleaned_data['email']
-			obj.phone = form.cleaned_data['phone']
-			obj.address = form.cleaned_data['address']
-			obj.adultQty = form.cleaned_data['adultQty']
-			obj.childQty = form.cleaned_data['childQty']
-			obj.save()
-			return HttpResponseRedirect('/price/')
-	else:
-		form = RegisterForm()
-	return render(request, 'register.html', {'form': form})
+
+def total_price(request, id):
+	event = Event.objects.all(id=id)
+	first = event[0]
+	adult = first.e_adult_price
+	child = first.e_child_price
+	forms = RegForm.objects.all(id=id)
+	one = forms[0]
+	aQty = one.adultQty
+	cQty = one.childQty
+	total = int(adult) * aQty + int(child) * cQty
+	# adult_qty = Event.e_adult_price * app_regform.adultQty
+	# child_qty = Event.e_child_price * RegForm.childQty
+	# priceT = adult_qty + child_qty
+	return render(request, 'total_price.html')
+
+
+# def post(request):
+# 	if request.method == 'POST':
+# 		form = RegisterForm(request.POST)
+# 		if form.is_valid():
+# 			obj = RegForm()
+# 			obj.first_name = form.cleaned_data['first_name']
+# 			obj.last_name = form.cleaned_data['last_name']
+# 			obj.email = form.cleaned_data['email']
+# 			obj.phone = form.cleaned_data['phone']
+# 			obj.address = form.cleaned_data['address']
+# 			obj.adultQty = form.cleaned_data['adultQty']
+# 			obj.childQty = form.cleaned_data['childQty']
+# 			obj.save()
+# 			return HttpResponseRedirect('/price/')
+# 	else:
+# 		form = RegisterForm()
+# 	return render(request, 'event-detail.html', {'form': form})
 
 
 # Accounts/login

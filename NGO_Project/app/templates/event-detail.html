@@ -12,6 +12,13 @@
     <h2>Admissions:</h2>
     <p>Adult: {{ event.e_adult_price }}</p>
     <p>Child: {{ event.e_child_price }}</p>
-    <a href="/register/"><button>Register</button></a>
+    <br>
+    <br>
+<!--    <a href="/register/"><button>Register</button></a>-->
 </div>
+
+<form method="post">
+    {% csrf_token %} {{ form }}
+    <button type="submit">Submit</button>
+</form>
 {% endblock %}
