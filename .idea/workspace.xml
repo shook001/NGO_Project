@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21cca9de-171c-46ca-b928-50a58ae6f72d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/NGO_Project/app/templates/event-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/NGO_Project/app/templates/event-detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NGO_Project/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/NGO_Project/app/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NGO_Project/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/NGO_Project/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NGO_Project/app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
+            <state relative-caret-position="227">
+              <caret line="32" column="44" lean-forward="true" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -47,7 +45,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NGO_Project/app/templates/event-detail.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="261">
@@ -60,7 +58,7 @@
         <entry file="file://$PROJECT_DIR$/NGO_Project/app/templates/total_price.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
-              <caret line="5" column="31" lean-forward="true" selection-start-line="2" selection-end-line="5" selection-end-column="31" />
+              <caret line="5" column="31" selection-start-line="2" selection-end-line="5" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -95,8 +93,8 @@
         <option value="$PROJECT_DIR$/NGO_Project/app/templates/register.html" />
         <option value="$PROJECT_DIR$/NGO_Project/newNGO/urls.py" />
         <option value="$PROJECT_DIR$/NGO_Project/app/templates/total_price.html" />
-        <option value="$PROJECT_DIR$/NGO_Project/app/views.py" />
         <option value="$PROJECT_DIR$/NGO_Project/app/templates/event-detail.html" />
+        <option value="$PROJECT_DIR$/NGO_Project/app/views.py" />
       </list>
     </option>
   </component>
@@ -257,7 +255,7 @@
     <entry file="file://$PROJECT_DIR$/NGO_Project/app/templates/total_price.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="5" column="31" lean-forward="true" selection-start-line="2" selection-end-line="5" selection-end-column="31" />
+          <caret line="5" column="31" selection-start-line="2" selection-end-line="5" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -278,20 +276,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NGO_Project/app/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/NGO_Project/app/templates/event-detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="261">
           <caret line="31" column="31" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NGO_Project/app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="32" column="44" lean-forward="true" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
