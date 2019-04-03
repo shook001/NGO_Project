@@ -12,13 +12,14 @@
     <h2>Admissions:</h2>
     <p>Adult: {{ event.e_adult_price }}</p>
     <p>Child: {{ event.e_child_price }}</p>
-    <br>
+    <hr>
     <br>
 <!--    <a href="/register/"><button>Register</button></a>-->
 </div>
 
 <form method="post">
-    {% csrf_token %} {{ form }}
+    {% csrf_token %}
+    {{ form.as_p }}
     <button type="submit">Submit</button>
 </form>
 {% endblock %}

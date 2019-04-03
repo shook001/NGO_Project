@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21cca9de-171c-46ca-b928-50a58ae6f72d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NGO_Project/app/templates/total_price.html" beforeDir="false" afterPath="$PROJECT_DIR$/NGO_Project/app/templates/total_price.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NGO_Project/app/templates/event-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/NGO_Project/app/templates/event-detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NGO_Project/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/NGO_Project/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,20 +55,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NGO_Project/app/templates/event-detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="289">
+              <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NGO_Project/app/templates/total_price.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="90">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -104,8 +103,8 @@
         <option value="$PROJECT_DIR$/NGO_Project/app/templates/register.html" />
         <option value="$PROJECT_DIR$/NGO_Project/app/views.py" />
         <option value="$PROJECT_DIR$/NGO_Project/newNGO/urls.py" />
-        <option value="$PROJECT_DIR$/NGO_Project/app/templates/event-detail.html" />
         <option value="$PROJECT_DIR$/NGO_Project/app/templates/total_price.html" />
+        <option value="$PROJECT_DIR$/NGO_Project/app/templates/event-detail.html" />
       </list>
     </option>
   </component>
@@ -290,17 +289,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NGO_Project/app/templates/event-detail.html">
+    <entry file="file://$PROJECT_DIR$/NGO_Project/app/templates/total_price.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NGO_Project/app/templates/total_price.html">
+    <entry file="file://$PROJECT_DIR$/NGO_Project/app/templates/event-detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="289">
+          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
         </state>
       </provider>
     </entry>
