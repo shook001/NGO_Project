@@ -10,7 +10,7 @@ def events(request): # good
 	events = Event.objects.all()
 	return render(request, 'events.html', {'events': events})
 
-# Selected object will be directed heres
+# Selected object will be directed her
 @login_required
 def event_detail(request, id):# good
 	try:
