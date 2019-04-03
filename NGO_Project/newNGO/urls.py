@@ -10,6 +10,4 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('confirmation/', views.confirm, name='confirmation'),
     path('event-detail/<int:id>/', views.event_detail, name='event_detail'),
-    # path('register/', views.post),
-    path('price/', views.price, name='price')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
