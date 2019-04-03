@@ -27,14 +27,22 @@ def event_detail(request, id):# good
 				obj.adultQty = form.cleaned_data['adultQty']
 				obj.childQty = form.cleaned_data['childQty']
 				obj.save()
-				return HttpResponseRedirect('/price/')
+				# return HttpResponseRedirect('event-detail/<int:id>/')
 		else:
 			form = RegisterForm()
+		forms = RegForm.objects.get(id=id)
+		total = event.e_adult_price * forms.adultQty + event.e_child_price * forms.childQty
+		# forms = RegForm.objects.all(id=id)
+		# one = forms[0]
+		# aQty = one.adultQty
+		# cQty = one.childQty
+		# total = int(adult) * aQty + int(child) * cQty
 	except Event.DoesNotExist:
 		raise Http404('Event not found!!')
 	context = {
 		'event': event,
-		'form': form
+		'form': form,
+		'total': total
 	}
 	return render(request, 'event-detail.html', context)
 
@@ -49,10 +57,7 @@ def total_price(request, id):
 	aQty = one.adultQty
 	cQty = one.childQty
 	total = int(adult) * aQty + int(child) * cQty
-	# adult_qty = Event.e_adult_price * app_regform.adultQty
-	# child_qty = Event.e_child_price * RegForm.childQty
-	# priceT = adult_qty + child_qty
-	return render(request, 'total_price.html')
+	return render(request, 'event-detail.html', {'total': total})
 
 
 # def post(request):

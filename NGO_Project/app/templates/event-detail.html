@@ -16,10 +16,18 @@
     <br>
 <!--    <a href="/register/"><button>Register</button></a>-->
 </div>
-
+<h2>Register</h2>
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Submit</button>
 </form>
+
+<hr>
+<br>
+
+<h1>Total Prices</h1>
+<p>Total Adult Tickets: {{ event.e_adult_price }}</p>
+<p>Total Child Tickets: {{ event.e_child_price }}</p>
+<p>Total Price: {{ total }}</p>
 {% endblock %}
