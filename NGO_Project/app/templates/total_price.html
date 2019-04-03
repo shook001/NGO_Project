@@ -1,12 +1,13 @@
-{% extends 'base.html' %}
-{% block title %}Total Price{% endblock %}
-{% block content %}
-{% if user.is_authenticated %}
+{% extends 'base.html' %} {% block title %}Total Price{% endblock %} {% block content %} {% if user.is_authenticated %}
 
 <h1>Total Prices</h1>
-<p>Total Adult Tickets: {{ event.e_adult_price }}</p>
-<p>Total Child Tickets: {{ event.e_child_price }}</p>
+<p>Total Adult Tickets: {{form.adultQty}}</p>
+<p>Total Child Tickets: </p>
 <p>Total Price: {{ total }}</p>
+
+<p>Total Adult Tickets: {{form.adultQty}}</p>
+<p>Total Child Tickets: </p>
+<p>Total Price: </p>
 <a href="{% url 'confirmation' %}"><p>Confirm</p></a>
 
 

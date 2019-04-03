@@ -34,7 +34,7 @@
             </ul>
             {% else %}
             <ul class="navbar-nav ml-auto mt-2">
-                <li class="nav-item"><a class="login" href="accounts/login">Log In</a></li>
+                <li class="nav-item"><a class="login" href="/accounts/login">Log In</a></li>
             </ul>
             <ul class="navbar-nav ml-auto mt-2">
                 <li class="nav-item"><a class="loginadmin" href="admin">Admin Log In</a></li>
@@ -70,18 +70,30 @@
 
     html {
         height: 100%;
+        position: relative;
     }
 
     body {
         min-height: 100%;
         display: flex;
         flex-direction: column;
+        position: relative;
+    }
+
+    #container {
+        position: relative;
+        width: 100%;
+        min-height: 100%;
+        padding-bottom: 100px;
+        box-sizing: border-box;
     }
 
     footer {
         width: 100%;
         height: 20px;
         background-color: #ffc0cb;
+        position: absolute;
+        bottom: 0;
     }
 </style>
 
