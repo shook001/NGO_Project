@@ -27,7 +27,8 @@
 <br>
 
 <h1>Total Prices</h1>
-<p>Total Adult Tickets: {{ event.e_adult_price }}</p>
-<p>Total Child Tickets: {{ event.e_child_price }}</p>
+<p>Total Adult Tickets: {{ adult }}</p>
+<p>Total Child Tickets: {{ child }}</p>
 <p>Total Price: {{ total }}</p>
+<button type="submit"><a href="{% url 'confirmation' %}">Confirm</a></button>
 {% endblock %}
